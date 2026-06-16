@@ -467,7 +467,7 @@ const ORIGINAL_COUNT = 58;
 
 
 // ── Server Config ────────────────────────────────────────────────────────
-var SERVER_URL = ''; // Set after deploying to Render
+var SERVER_URL = 'https://phx-directory-server.onrender.com';
 var isSaving = false;
 var lastSaveTime = null;
 var saveTimer = null;
@@ -909,16 +909,9 @@ var styleEl = document.createElement('style');
 styleEl.textContent = '@keyframes spin { from { display:inline-block;transform:rotate(0deg); } to { transform:rotate(360deg); } }';
 document.head.appendChild(styleEl);
 
-// Show baked-in data immediately
+// Show baked-in data immediately, then sync from server
 showSyncStatus('loaded', RAW_DATA.length + ' users (local) ✓');
-// Load from server if URL is set
-var savedServerUrl = localStorage.getItem('phx_server_url');
-if (savedServerUrl) {
-  SERVER_URL = savedServerUrl;
-  setTimeout(loadFromSheet, 500);
-} else {
-  showSyncStatus('loaded', RAW_DATA.length + ' users (local) ✓');
-}
+setTimeout(loadFromSheet, 500);
 
 
 </script>
