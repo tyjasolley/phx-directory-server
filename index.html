@@ -550,7 +550,7 @@ function showSyncStatus(state, msg) {
   el.style.color = colors[state] || '#6b7280';
   el.innerHTML = (icons[state] || '○') + ' ' + (msg || state);
   if (state === 'loading' || state === 'saving') {
-    el.style.animation = 'spin 1s linear infinite';
+    el.style.animation = '';
   } else {
     el.style.animation = '';
   }
