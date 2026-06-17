@@ -61,7 +61,7 @@ body { font-family: 'Inter', sans-serif; background: var(--off-white); color: va
 .hero-title { font-size: clamp(52px, 6vw, 88px); font-weight: 900; line-height: 0.9; letter-spacing: -3px; color: var(--black); text-transform: lowercase; }
 .hero-title span { color: var(--red); }
 .hero-sub { font-size: 12px; color: var(--text-muted); letter-spacing: 0.5px; margin-top: 20px; max-width: 280px; line-height: 1.7; }
-
+.hero-company {color: black; text-transform: uppercase; text-decoration: underline; text-decoration-color: var(--red);}
 /* Stats bar */
 .hero-stats { display: flex; border-top: 1px solid var(--border); margin-top: 40px; }
 .hstat { padding: 20px 32px; border-right: 1px solid var(--border); flex: 1; }
@@ -255,9 +255,9 @@ td:last-child { border-right: none; }
 ::-webkit-scrollbar-thumb:hover { background: var(--black); }
 
 @media(max-width:768px) {
-  .topnav, .hero, .controls-bar, .pagination, .removed-header, .removed-table-wrap { padding-left: 20px; padding-right: 20px; }
-  .hero-right { display: none; }
-  .hero-title { font-size: 44px; letter-spacing: -2px; }
+  .topnav, ., .controls-bar, .pagination, .removed-header, .removed-table-wrap { padding-left: 20px; padding-right: 20px; }
+  .-right { display: none; }
+  .-title { font-size: 44px; letter-spacing: -2px; }
   .hstat { padding: 14px 16px; }
   .hstat-val { font-size: 22px; }
   .manage-modal { width: 100%; }
@@ -288,12 +288,12 @@ td:last-child { border-right: none; }
   <button onclick="setAppsScriptUrl()" style="background:#f59e0b;border:none;color:white;padding:6px 14px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;font-family:Inter,sans-serif;">Set URL</button>
   <button onclick="document.getElementById('setup-banner').style.display='none'" style="background:none;border:none;color:#92400e;cursor:pointer;font-size:16px;line-height:1;">&#x2715;</button>
 </div>
-<!-- HERO -->
+<!--  -->
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-eyebrow">PHX &mdash; Corporate Office (HO)</div>
-      <div class="hero-title">card<br>holders<span>.</span></div>
+      <div class="hero-title">card<br>holders<span>.</span><span>.</span class= "hero-company">ONNI</div>
       <div class="hero-sub">Active user directory for PHX Corporate Office. Users with at least one assigned access card.</div>
       <div class="hero-stats">
         <div class="hstat"><div class="hstat-val" id="stat-active">58</div><div class="hstat-lbl">Active Users</div></div>
