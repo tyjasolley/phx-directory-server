@@ -121,7 +121,7 @@ body { font-family: 'Inter', sans-serif; background: var(--off-white); color: va
 /* ── TABLE ── */
 .table-wrap { max-width: 100%; margin: 0 auto; background: var(--white); overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-thead { position: static; top: 56px; z-index: 10; }
+thead { position: static; 56px; z-index: 10; }
 th { background: var(--black); color: rgba(255,255,255,0.5); font-weight: 700; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 16px; text-align: left; white-space: nowrap; cursor: pointer; user-select: none; transition: color 0.12s; border-right: 1px solid rgba(255,255,255,0.07); }
 th:last-child { border-right: none; }
 th:hover { color: rgba(255,255,255,0.9); }
@@ -552,11 +552,7 @@ function showSyncStatus(state, msg) {
   var colors = { loading: '#6b7280', saving: '#f59e0b', loaded: '#10b981', saved: '#10b981', error: '#ef4444', readonly: '#6b7280', empty: '#f59e0b' };
   el.style.color = colors[state] || '#6b7280';
   el.innerHTML = (icons[state] || '○') + ' ' + (msg || state);
-  if (state === 'loading' || state === 'saving') {
-    el.style.animation = 'spin 1s linear infinite';
-  } else {
-    el.style.animation = '';
-  }
+
 }
 
 const AC=[['#0a0a0a','#3d3d38'],['#e8341c','#c42b16'],['#1d4ed8','#3b82f6'],['#0f766e','#14b8a6'],['#6d28d9','#8b5cf6'],['#047857','#10b981'],['#b45309','#f59e0b'],['#374151','#6b7280']];
