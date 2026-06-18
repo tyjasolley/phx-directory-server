@@ -297,7 +297,7 @@ td:last-child { border-right: none; }
       <div class="hero-eyebrow">PHX &mdash; Corporate Office (HO)</div>
       <div style="display:flex;align-items:flex-end;gap:32px;flex-wrap:wrap;">
         <div class="hero-title">card<br>holders<span style="color:var(--red);">.</span></div>
-        <div style="font-size:clamp(52px,6vw,88px);font-weight:900;line-height:0.9;letter-spacing:-3px;color:var(--black);text-transform:uppercase;border-bottom:5px solid var(--red);padding-bottom:4px;margin-bottom:8px;">ONNI</div>
+        <div class="hero-title" style="text-transform:uppercase;border-bottom:5px solid var(--red);padding-bottom:6px;">ONNI</div>
       </div>
       <div class="hero-sub">Active user directory for PHX Corporate Office. Users with at least one assigned access card.</div>
       <div class="hero-stats">
@@ -907,10 +907,7 @@ if (savedUrl) {
   document.getElementById('setup-banner').style.display = 'none';
 }
 
-// Add spin animation for sync icon
-var styleEl = document.createElement('style');
-styleEl.textContent = '@keyframes spin { from { display:inline-block;transform:rotate(0deg); } to { transform:rotate(360deg); } }';
-document.head.appendChild(styleEl);
+
 
 // Show baked-in data immediately, then sync from server
 showSyncStatus('loaded', RAW_DATA.length + ' users (local) ✓');
