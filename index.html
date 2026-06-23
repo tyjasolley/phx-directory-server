@@ -783,18 +783,6 @@ document.getElementById('confirmOk').addEventListener('click',function(){
 });
 function closeConfirm(){document.getElementById('confirmModal').classList.remove('open');pendingDelete={type:null,name:null};}
 
-
-
-},50);}
-  else{section.style.display='none';btn.style.background='';btn.style.color='';btn.style.borderLeft='';}
-});
-
-
-  var blob=new Blob([lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
-  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='removed_users.csv';
-  document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href);
-});
-
 function exportCSV(){
   var cols=['Username','Full Name','Email','Department','Office','Primary Card Number','Secondary Card Number','Created Date','Username alias'];
   function ec(v){var s=String(v==null?'':v);return(s.indexOf(',')!==-1||s.indexOf('"')!==-1)?'"'+s.replace(/"/g,'""')+'"':s;}
